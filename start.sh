@@ -27,9 +27,19 @@ if [ -z "$TS_HOSTNAME" ]; then
     exit 1
 fi
 
+if [ -z "$PUBLIC_SSH_KEY" ]; then
+    echo "ERROR: PUBLIC_SSH_KEY environment variable is required"
+    exit 1
+fi
+
 # Set default values for optional variables
 TS_STATE_DIR="${TS_STATE_DIR:-/var/lib/tailscale}"
 TS_EXTRA_ARGS="${TS_EXTRA_ARGS:-}"
+
+echo "Adding public SSH key to authorized_keys..."
+mkdir -p /root/.ssh
+echo "$PUBLIC_SSH_KEY" > /root/.ssh/authorized_keys
+chmod 600 /root/.ssh/authorized_keys
 
 echo "Starting Tailscale bastion host..."
 echo "Hostname: $TS_HOSTNAME"
