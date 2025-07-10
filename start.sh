@@ -41,6 +41,9 @@ mkdir -p /root/.ssh
 echo "$PUBLIC_SSH_KEY" > /root/.ssh/authorized_keys
 chmod 600 /root/.ssh/authorized_keys
 
+echo "Starting sshd service..."
+sshd -D &
+
 echo "Starting Tailscale bastion host..."
 echo "Hostname: $TS_HOSTNAME"
 echo "State directory: $TS_STATE_DIR"
