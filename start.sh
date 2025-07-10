@@ -39,10 +39,12 @@ TS_EXTRA_ARGS="${TS_EXTRA_ARGS:-}"
 echo "Adding public SSH key to authorized_keys..."
 mkdir -p /root/.ssh
 echo "$PUBLIC_SSH_KEY" > /root/.ssh/authorized_keys
+echo "Setting secure permissions..."
+chmod 700 /root/.ssh
 chmod 600 /root/.ssh/authorized_keys
 
 echo "Starting sshd service..."
-sshd -D &
+/usr/sbin/sshd
 
 echo "Starting Tailscale bastion host..."
 echo "Hostname: $TS_HOSTNAME"
