@@ -1,4 +1,4 @@
-FROM debian:bookworm-slim@sha256:7e490910eea2861b9664577a96b54ce68ea3e02ce7f51d89cb0103a6f9c386e0
+FROM debian:bookworm-slim@sha256:f06537653ac770703bc45b4b113475bd402f451e85223f0f2837acbf89ab020a
 
 # Install Tailscale and necessary dependencies (like openssh-server)
 RUN apt-get update && apt-get install -y curl ca-certificates openssh-server
