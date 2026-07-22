@@ -1,5 +1,14 @@
 # Changelog
 
+## [2.3.4](https://github.com/GlueOps/tailscale-bastion/compare/v2.3.3...v2.3.4) (2026-07-22)
+
+
+### Miscellaneous Chores
+
+* **fallback:** update debian ([#67](https://github.com/GlueOps/tailscale-bastion/issues/67)) ([bcd684c](https://github.com/GlueOps/tailscale-bastion/commit/bcd684cc423b339bee58e17ee63750a14895d58e))
+* **fallback:** update docker/setup-qemu-action ([#64](https://github.com/GlueOps/tailscale-bastion/issues/64)) ([cc4f33b](https://github.com/GlueOps/tailscale-bastion/commit/cc4f33b817d5fba79a531e53d2cac6f95d1ef35f))
+* **patch:** update dataaxiom/ghcr-cleanup-action to v1.2.2 #patch ([#65](https://github.com/GlueOps/tailscale-bastion/issues/65)) ([d562abd](https://github.com/GlueOps/tailscale-bastion/commit/d562abd12941064458b4c77d1f7ad3227fe830bb))
+
 ## [2.3.3](https://github.com/GlueOps/tailscale-bastion/compare/v2.3.2...v2.3.3) (2026-06-30)
 
 
